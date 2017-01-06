@@ -1,0 +1,63 @@
+### This is a project that I started for the '100 days of code' challenge. 
+### It is going to be an app that generates a guitar practice ideas, written in Python3.
+### This log will be used for notes on the development ideas and other app-related scribbles.
+### General progress and thoughts on 100 days of code will be posted on www.danielkblogs.wordpress.com
+### To understand many things within the app, a basic knowledge of music theory and guitar playing is necessary - please email me at danielkaczmarczyk2@gmail.com or tweet to me @_daniel_tweets if you have any questions.
+
+Day 1
+Friday, 6th January, 2017
+
+I will start with a command line tool, but the plan is to deploy it as a full-blown web app.
+
+App features:
+	Scale generator
+	Arpeggio generator
+
+	Scale database
+	Arpeggio database
+
+	Rhythm generator
+
+	Chord progression generator
+
+	Theoretical topic generator
+
+	Technical practice generator
+
+	Tabulature printer
+
+	Chord diagram printer
+
+	Scale diagram printer
+
+Functionality:
+	User should be able to choose: 
+		- how much time there is to practice
+		- what kind of exercises to work on:
+			- technique/theory/scales/chords
+		- should be able to export it to pdf/csv/txt
+		- email it automatically
+			- set an email subscription
+		- check off what's done
+		- keep record of created entries
+		- have the ability to browse favourites
+		- create names for the favourites
+
+Things I have to do:
+	- Find a complete list of musical scales / chords, some kind of compendium
+	and include it as a txt/csv/json file for my program to use
+
+Functions to build:
+	- Scale translator from integer list to a printable version, example:
+		blues = [0, 3, 5, 6, 7, 10]
+		blues = '1, b3, 4, b5, 5, b7'
+	- Random scale/arpeggio generator, example output:
+		rand_scale = [0, 3, 5, 9, 11]
+		rand_arp = [1, 2, 6]
+	- Fit checker:
+		*Checks if given scale/arpeggio can be found within another scale
+
+
+
+
+
