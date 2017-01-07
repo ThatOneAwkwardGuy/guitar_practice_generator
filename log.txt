@@ -9,6 +9,33 @@ Friday, 6th January, 2017
 
 I will start with a command line tool, but the plan is to deploy it as a full-blown web app.
 
+Day 2
+Saturday, 7th January, 2017
+
+Goal for today: define the random scale generator.
+Great, it took 3 minutes.
+
+I think that the most interesting takeaway for me from this will be mastering
+the various data collections in python. Although I have already worked with
+all of them in the last couple of weeks, choosing right data structures for
+the app will be the most interesting part of it.
+
+Tried to run some doctests on the random_scale_generator, but comes out that
+they will almost always certainly fail cause the results of functions are random.
+I am wondering if there's a possiblity of including some more elaborate tests?
+
+I have read the documentation and there is no such option, so I have solved it in the
+least programmer-like way and run the tests by hand, printed out the results and
+inspected the values. Luckily, the function is easy enough for me to inspect and 
+judge whether it works fine or not.
+
+All examples have proven to be correct, there is enough notes in all the scales
+and they all have the root note included. But then again... What could have went wrong in such a small function?
+
+
+
+Notes:
+
 App features:
 	Scale generator
 	Arpeggio generator
