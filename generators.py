@@ -8,6 +8,8 @@ def random_scale_generator(number_of_notes):
 
 	(int) -> set
 
+	IMPORTANT: Doctests will fail.
+
 	>>> random_scale_generator(3)
 	{0, 3, 6}
 	>>> random_scale_generator(7)
@@ -21,8 +23,22 @@ def random_scale_generator(number_of_notes):
 		scale.add(random.randint(1, 11))
 	return scale
 
-def print_test_scales():
-	for n in range(1, 12):
-		print(n, random_scale_generator(n))
 
-print_test_scales()
+
+
+def fretrboard_printer(tuning):
+	''' really ok prints the fretboard, but does not really
+	well handle the modularity - in this implementation, 
+	the fretboard is only a printable set of strings, and
+	I would like it to be an object that I will be able to 
+	show the scales on.'''
+	string = '|-|'+''.join(['-' for n in range(24)])
+	for letter in tuning:
+		print(letter + string + '|')
+	print(' ' * 6 + 'X' + ((' ' + 'X') * 2) + ' ' * 2 + 'X' + ' ' + 'X' +
+		  ' ' * 2 + 'X' + ((' ' + 'X') * 2) + ' ' * 2 + 'X' + ' ' + 'X')
+
+
+tuning = ['E', 'B', 'G', 'D', 'A', 'E']
+
+fretrboard_printer(tuning)

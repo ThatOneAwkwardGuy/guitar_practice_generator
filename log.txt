@@ -12,6 +12,8 @@ I will start with a command line tool, but the plan is to deploy it as a full-bl
 Day 2
 Saturday, 7th January, 2017
 
+(you can read this at www.danielkblogs.wordpress.com )
+
 Goal for today: define the random scale generator.
 Great, it took 3 minutes.
 
@@ -32,7 +34,13 @@ judge whether it works fine or not.
 All examples have proven to be correct, there is enough notes in all the scales
 and they all have the root note included. But then again... What could have went wrong in such a small function?
 
+Day 3
+Sunday, 8th January, 2017
 
+I have built the fretboard printer, but I am completely not happy about it. 
+Why?
+
+ I will have to spend the next session on creating the fretboard class I think. I want to implement the ability to use different tunings and amount of strings.
 
 Notes:
 
