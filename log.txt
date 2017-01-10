@@ -42,8 +42,13 @@ Why?
 
  I will have to spend the next session on creating the fretboard class I think. I want to implement the ability to use different tunings and amount of strings.
 
-Notes:
 
+Day 4 & 5:
+
+No work on day4, but I've build few functions on day 5 + announced collaboration request. 
+
+Notes:
+Planned:
 App features:
 	Scale generator
 	Arpeggio generator
