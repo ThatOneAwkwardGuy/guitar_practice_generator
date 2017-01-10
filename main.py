@@ -1,4 +1,7 @@
+# WELCOME CONTRIBUTORS, THIS IS A VERY EARLY STAGE, PLEASE EXCUSE THE INITIAL MESS ;)
+
 # some notes on how to store data
+
 
 #scales
 chromatic = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
