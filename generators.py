@@ -25,9 +25,6 @@ def random_scale_generator(number_of_notes):
 		scale.add(random.randint(1, 11))
 	return scale
 
-
-
-
 def fretrboard_printer(tuning):
 	''' really ok prints the fretboard, but does not really
 	well handle the modularity - in this implementation, 
@@ -39,7 +36,6 @@ def fretrboard_printer(tuning):
 		print(letter + string + '|')
 	print(' ' * 6 + 'X' + ((' ' + 'X') * 2) + ' ' * 2 + 'X' + ' ' + 'X' +
 		  ' ' * 2 + 'X' + ((' ' + 'X') * 2) + ' ' * 2 + 'X' + ' ' + 'X')
-
 
 tuning = ['E', 'B', 'G', 'D', 'A', 'E']
 
@@ -74,8 +70,6 @@ def scale_string_translator(scale, root):
 	>>> scale_string_translator(major_scale, C)
 	['O', 'O', '-', 'O', '-', 'O', '-', 'O', 'X', '-', 'O', '-']  # this is on the E string
 	'''
-
-
 
 def permutations_1234_generator():
 	pass
