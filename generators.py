@@ -10,7 +10,8 @@ def random_scale_generator(number_of_notes):
 
 	(int) -> set
 
-	IMPORTANT: Doctests will fail.
+	IMPORTANT: Doctests will fail, the scales are random every time.
+	## Does anyone know what might be causing this?
 
 	>>> random_scale_generator(3)
 	{0, 3, 6}
@@ -72,7 +73,32 @@ def scale_string_translator(scale, root):
 	'''
 
 def permutations_1234_generator():
+	'''generates a alternate picking exercise
+	based on one of 24 permutations of the 
+	1234 combination
+	
+	>>> permutations_1234_generator()
+	e||-------------------------------------------|
+	B||-------------------------------------------|
+	G||-------------------------1-3-4-2-----------|
+	D||-----------------1-3-4-2-------------------|
+	A||---------1-3-4-2---------------------------|
+	E||-1-3-4-2-----------------------------------| etc
+	    u d u d u d u d u d u d u d u d etc  
+
+	'''
 	pass
 
 def permutations_123_generator():
+	'''does the same as the function above, 1234 generator
+	but with 123 combination
+
+		>>> permutations_1234_generator()
+	e||-----------------------------------------|
+	B||-----------------------------------------|
+	G||-------------------------1-3-2-----------|
+	D||-----------------1-3-2-------------------|
+	A||---------1-3-2---------------------------|
+	E||-1-3-2-----------------------------------| etc
+	    u d u d u d u d u d u d u d u d etc  '''
 	pass
