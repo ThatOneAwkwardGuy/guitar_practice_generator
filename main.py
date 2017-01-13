@@ -3,6 +3,7 @@
 import exercise, generator, scales
 
 def routine_printer(exercise, generator, scale):
+	'''test'''
 	print('Practice routine')
 	print(exercise.text)
 	print(exercise.time)
