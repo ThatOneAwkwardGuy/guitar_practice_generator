@@ -1,14 +1,30 @@
 # WELCOME CONTRIBUTORS, THIS IS A VERY EARLY STAGE, PLEASE EXCUSE THE INITIAL MESS ;)
 
-# some notes on how to store data
+import arpeggio, exercise, generator, scales
+
+arpeggio = arpeggio.Arpeggio('major', [0, 4, 7])
+
+def routine_printer(arpeggio, scale_gen):
+	'''test'''
+	print('Practice routine')
+	print('Arpeggio:', arpeggio.name, arpeggio.recipe)
+	print('Random scale:', scale_gen)
+	print('Alternate picking pattern:', generator.permutations_generator())
 
 
-#scales
-chromatic = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-major = [0, 2, 4, 5, 7, 9, 11]
-minor = [0, 2, 3, 5, 7, 8, 10]
-blues = [0, 3, 5, 6, 7, 10]
-# every integer represents the distance from the root note
-# 0 is the root note, 7 is a perfect 5th, 3 is a minor 3rd etc
-# the possible intervals are from the root up until major 7th
-# using lists for scales and arpeggios
+#mockup of the output
+print('scale to practice: e minor')
+f_board = generator.fretboard_generator(['e', 'b', 'g', 'd', 'a', 'e'])
+for string in generator.scale_string_translator('e', [0,2,3,5,7,8,10], f_board):
+	print (''.join(string))
+print()
+
+print('arpeggio to practice: c major')
+
+f_board = generator.fretboard_generator(['e', 'b', 'g', 'd', 'a', 'e'])
+for string in generator.scale_string_translator('c', [0, 4, 7], f_board):
+	print (''.join(string))
+print()
+
+print('picking /left hand exercise: ')
+print(generator.permutations_generator())

@@ -59,8 +59,8 @@ def fretboard_generator(tuning):
 		fretboard.append(string_generator(note))
 	return fretboard
 
-def scale_string_translator(scale, root):
-	'''(list, string) -> list
+def scale_string_translator(root, scale, fretboard):
+	'''(list, string, list) -> list
 	translates the scale formula into symbols depicting root note 
 	and other notes
 
@@ -70,35 +70,48 @@ def scale_string_translator(scale, root):
 
 	>>> scale_string_translator(major_scale, C)
 	['O', 'O', '-', 'O', '-', 'O', '-', 'O', 'X', '-', 'O', '-']  # this is on the E string
+	
+	root is R
+	every index in scale stays rest is replaced by '-' 
+	everythin that's not R or - is replaced by O
+	
+	create a string that's a root string, cut it in half
+	map out which notes are IN SCALE, and this list will be used
+	to replace the notes with '-' 's and 'o' 's
 	'''
+	sample_string = string_generator(root)
+	sample_string = sample_string[:12]
+	scale_notes = []
+	for note in scale:
+		scale_notes.append(sample_string[note])
+	for string in fretboard:
+		for note in string:
+			if note == root:
+				string[string.index(note)] = 'R'
+			elif note in scale_notes:
+				string[string.index(note)] = 'O'
+			else:
+				string[string.index(note)] = '-'
 
-def permutations_1234_generator():
+	return fretboard
+
+
+
+def permutations_generator():
 	'''generates a alternate picking exercise
 	based on one of 24 permutations of the 
 	1234 combination
-	
-	>>> permutations_1234_generator()
-	e||-------------------------------------------|
-	B||-------------------------------------------|
-	G||-------------------------1-3-4-2-----------|
-	D||-----------------1-3-4-2-------------------|
-	A||---------1-3-4-2---------------------------|
-	E||-1-3-4-2-----------------------------------| etc
-	    u d u d u d u d u d u d u d u d etc  
-
 	'''
+	options = [1, 2, 3, 4]
+	result = ''
+	while len(result) != 4:
+		number = random.choice(options)
+		result += str(number)
+	return result
+
+def print_part_fretboard(range, fretboard):
+	'''prints a part of the fretboard between given frets'''
 	pass
 
-def permutations_123_generator():
-	'''does the same as the function above, 1234 generator
-	but with 123 combination
-
-		>>> permutations_1234_generator()
-	e||-----------------------------------------|
-	B||-----------------------------------------|
-	G||-------------------------1-3-2-----------|
-	D||-----------------1-3-2-------------------|
-	A||---------1-3-2---------------------------|
-	E||-1-3-2-----------------------------------| etc
-	    u d u d u d u d u d u d u d u d etc  '''
+if __name__ == '__main__':
 	pass

@@ -1,6 +1,8 @@
 class Exercise:
+	'''base class definition for exercises'''
+	def __init__(self, e_type, level, text, time):
 
-	def __init__(self, type, level, text):
-		self.type = type
+		self.type = e_type
 		self.level = level
 		self.text = text
+		self.time = time
