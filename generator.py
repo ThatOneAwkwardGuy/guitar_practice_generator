@@ -41,9 +41,9 @@ def permutation_generator(n=4, allow_repeats=True):
 	based on one of permutations of 1...n.
 	n is restricted to <= 9
 	'''
-	n = 9 if n > 9 else n
+	n = 4 if n > 4 else n
 	# options is just a list of integers 1 to n, converted to strings
-	options = map(lambda x: str(x), range(1, n + 1))
+	options = list(map(lambda x: str(x), range(1, n + 1)))
 	if allow_repeats:
 		result = ''.join([random.choice(options) for _ in range(n)])
 	else:
