@@ -3,7 +3,7 @@
 import random
 
 
-def fretrboard_printer(tuning):
+def fretboard_printer(tuning):
 	''' really ok prints the fretboard, but does not really
 	well handle the modularity - in this implementation,
 	the fretboard is only a printable set of strings, and
