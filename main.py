@@ -1,6 +1,6 @@
 # WELCOME CONTRIBUTORS, THIS IS A VERY EARLY STAGE, PLEASE EXCUSE THE INITIAL MESS ;)
 
-import arpeggio, exercise, generator, scales
+import arpeggio, exercise, generator, scale
 
 arpeggio = arpeggio.Arpeggio('major', [0, 4, 7])
 
